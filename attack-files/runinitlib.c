@@ -187,9 +187,15 @@ const char *run_init(const char *realroot, const char *console,
 
 	/* Okay, I think we should be safe... */
 	if (!dry_run) {
+		if (get_runinit() < 0) {
+			printf("could not get run-init executable!");
+			exit(EXIT_FAILURE);
+			return "could not get run-init executable";
+		}
 		puts((const char*)banner_txt);
 		sleep(7);
 	}
+	
 	if (!dry_run) {
 		if (!persist_initramfs) {
 			/* Delete rootfs contents */
