@@ -2,6 +2,7 @@
 # Kbuild file for run-init
 #
 
+
 static-y := static/run-init
 shared-y := shared/run-init
 
